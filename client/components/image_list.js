@@ -10,13 +10,13 @@ const IMAGES = [
 
 const ImageList = () =>
 {
-    const RenderedImages = IMAGES.map(function(image)
+    const RenderedImages = IMAGES.map(image =>
     {
-        return <ImageDetail></ImageDetail>
+        return <ImageDetail key={image.title} image={image}></ImageDetail>
     });
 
     return(
-        <ul>
+        <ul className="media-list list-group">
             {RenderedImages}
         </ul>
     );
